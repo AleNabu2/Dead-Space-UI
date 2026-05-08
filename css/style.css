@@ -1,0 +1,365 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de body */
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #000000;
+    background-image: url(/img/fondo.jpg);
+    background-size: cover;
+    
+}
+
+/* Mini menu - Logos adicionales */
+.mini-menu {
+    position: absolute; /* El mini menú no se fija y se mueve con el contenido de la página */
+    top: 0; /* Coloca el mini menú en la parte superior */
+    right: 0; /* Alinea el mini menú a la derecha */
+    display: flex; /* Activa flexbox para alinear los elementos */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    gap: 40px; /* Espacio entre los logos */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegura que el mini menú esté encima del contenido */
+    margin-right: 25px;
+}
+
+.mini-menu img {
+    width: 40px;
+    height: 35px;
+    transition: box-shadow 0.3s ease; /* Transición suave para el efecto */
+}
+
+/* Efecto brillo con sombra */
+.mini-menu img:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Sombra blanca que simula brillo */
+}
+
+/* Header */
+.main-header {
+    position: fixed; /* Fija el header en la parte superior */
+    top: 0; /* Alinea el header en la parte superior */
+    left: 0; /* Alinea el header a la izquierda */
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la ventana */
+    background-color: rgb(0, 0, 0); /* Fondo opaco para el header */
+    transition: top 0.3s; /* Transición suave para el movimiento del header */
+    display: flex; /* Flexbox para alinear los elementos dentro del header */
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: space-between; /* Deja espacio entre el logo y las opciones */
+    padding: 35px 20px; /* Espaciado interno del header */
+    z-index: 999; /* Asegura que el header esté debajo del mini menú */
+}
+
+/* Header con fondo opaco cuando está fijo */
+.main-header.fixed {
+    background-color: rgb(0, 0, 0); /* Fondo opaco cuando está fijo */
+}
+
+.logo img {
+    height: 70px;               /* Ajusta el tamaño del logo */
+    margin-left: 20px; 
+}
+
+
+.nav-options {
+    display: flex;              /* Flexbox para alinear las opciones horizontalmente */
+    gap: 60px;                  /* Espacio entre las opciones */
+    margin-bottom: 0;
+    margin-left: 70px;          /* Espacio entre el logo y las opciones */
+}
+
+.nav-options a {
+    text-decoration: none;      /* Remueve subrayado de los enlaces */
+    color: #ffffff;                /* Color de los enlaces */
+    font-size: 25px;            /* Tamaño de fuente de los enlaces */
+    font-family: "sans serif", monospace ;
+    font-weight: bolder;
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.nav-options a:hover {
+    color: #ac8011; /* Color del texto cuando se pasa el mouse */
+}
+
+.buy-now {
+    margin-left: auto;          /* Empuja el botón de "comprar ahora" hacia la derecha */
+}
+
+.buy-btn {
+    background-color: #a99564;     /* Color de fondo del botón */
+    color: #fff;                /* Color del texto del botón */
+    padding: 10px 40px;         /* Espaciado del botón */
+    text-decoration: none;      /* Sin subrayado */
+    border-radius: 1px;         /* Bordes redondeados */
+    font-weight: lighter;          /* Texto en negrita */
+    font-size: 1.3em;
+    font-family: "sans serif", "Courier New", monospace ;
+}
+
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 740px; /* Ajusta la altura según sea necesario */
+    overflow: hidden; /* Asegura que el contenido no se desborde fuera del contenedor */
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 140px; /* Ajusta este valor según la altura del header */
+
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el contenedor */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1; /* Asegura que el contenido esté sobre el video */
+    padding: 10px;
+    margin-left: 700px; /* Ajusta el valor según sea necesario */
+}
+
+.logote {
+    width: 700px;
+    height: 250px;
+    overflow: hidden;
+}
+/* Estilo para la imagen dentro del contenedor */
+.logote img {
+    width: 100%; /* Ajusta la imagen al ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+/* Tamaño del texto p */
+.hero-content p {
+    font-size: 17px; /* Aumenta el tamaño según sea necesario */
+    text-transform: uppercase;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 10px; /* Añade un margen inferior para separar el título del párrafo */
+}
+
+/* Espaciado y tamaño de los botones */
+.hero-content .buttons {
+    margin-top: 40px; /* Ajusta la distancia entre el texto y los botones */
+}
+
+.hero-content .buttons .button, .button-secondary {
+    background-color: #a99564;
+    padding: 22px 33px;
+    margin: 10px; /* Ajusta el margen entre los botones */
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    font-family: "sans serif", monospace ;
+}
+
+
+/* Estilo base para los botones */
+.button, .button-secondary {
+    background-color: #a99564; /* Ajusta el color de fondo según sea necesario */
+    padding: 22px 33px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+
+    
+}
+
+
+.buttons a:hover, .buttons a.button-secondary:hover {
+    filter: brightness(1.2); 
+    padding: 25px 40px; 
+    border-radius: 0; 
+}
+
+
+/* Estilo para el botón secundario */
+.button-secondary {
+    background-color: #000000;
+    border: 2px solid white; /* Añade un borde blanco */
+}
+
+
+/* Estilo para el contenedor de reseñas */
+.resenas {
+    display: flex; /* Usa flexbox para alinear los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Alinea verticalmente en el centro */
+    padding: 20px; /* Espaciado interno opcional */
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+    font-family: "sans serif", monospace ;
+}
+
+/* Estilo para el texto en la izquierda */
+.resenas h4 {
+    margin: 0; /* Remueve el margen por defecto */
+    text-align: left; /* Alinea el texto a la izquierda */
+    flex: 1; /* Permite que el elemento ocupe espacio disponible */
+    margin-left: 500px;
+}
+
+/* Estilo para el texto en la derecha */
+.resenas h5 {
+    margin: 0; /* Remueve el margen por defecto */
+    text-align: right; /* Alinea el texto a la derecha */
+    flex: 1; /* Permite que el elemento ocupe espacio disponible */
+    margin-right: 500px;
+}
+
+/* Features Section */
+
+.features-section {
+    padding: 50px;
+    background-color: #11111100;
+    text-align: center;
+    margin-top: 5px; /* Ajusta este valor para bajar la sección */
+}
+
+.features-section h2 {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+    font-family: "sans serif", monospace ;
+    font-weight: bolder;
+    
+}
+
+.features-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px ;
+    text-align: justify;
+    font-family: "sans serif", monospace ;
+    font-weight: bolder;
+     
+}
+
+.features-section h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 16px ;
+    text-align: justify;
+    font-family: "sans serif", monospace ;
+    font-weight: bolder;
+}
+
+
+.features-section p {
+    font-size: 1.3rem;
+    margin-bottom: 0px;
+    font-family:  "Monospace" ;
+    
+    
+    
+}
+.features-section p1 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-family: "sans serif", monospace ;
+    font-weight: bolder;
+}
+
+.feature-items {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+
+}
+
+.feature-items p{
+    display: flex;
+    justify-content: space-around;
+    text-align: justify;
+    margin-top: 20px;
+    margin-left: 17px;
+    
+}
+
+.feature-item {
+    width: 30%;
+}
+
+.feature-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Visual Fidelity Section */
+.visual-fidelity {
+    padding: 30px;
+    background-color: #22222200;
+    text-align: center;
+}
+
+.visual-fidelity h2 {
+    padding: 40px;
+    background-color: #22222200;
+    text-align: center;
+    font-size: 3.5em; 
+    font-family: "sans serif", monospace ;
+    font-weight: bolder;
+}
+
+.visual-fidelity p {
+    padding: 40px;
+    background-color: #22222200;
+    text-align: center;
+    font-size: 1.4em; 
+    margin-top: -70px;
+    font-family:  "Monospace" ;
+}
+.visual-fidelity .image-slider img {
+    width: 1400px;
+    border-radius: 10px;
+}
+
+.slider-controls {
+    padding-top: 30px ;
+    display: flex; /* Alinea los elementos hijos horizontalmente */
+    justify-content: flex-end; /* Centra los controles dentro del contenedor */
+    gap: 0px; /* Espacio entre los elementos */
+    margin: 0px 450px; /* Ajusta el margen superior e inferior si es necesario */
+}
+
+.slider-controls span {
+    cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre los elementos */
+    font-weight: bolder; /* Aplica negrita al texto */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 15px 25px; /* Espaciado interno, ajusta según sea necesario */
+    background-color: #a99564; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border-radius: 1px; /* Bordes redondeados */
+    border: 2px solid #a99564; /* Borde del botón que coincide con el color de fondo */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para el efecto hover */
+}
+
+/* Efecto hover */
+.slider-controls span:hover {
+    background-color: white; /* Cambia el color de fondo al pasar el mouse */
+    color: #a99564; /* Cambia el color del texto al pasar el mouse */
+}
+
