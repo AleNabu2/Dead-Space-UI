@@ -26,7 +26,7 @@ Recrear una interfaz temática inspirada en *Dead Space* con el fin de practicar
 
 ---
 
-## aracterísticas principales
+## Características principales
 
 - Estética oscura inspirada en *Dead Space*
 - Interfaz modular tipo dashboard futurista
